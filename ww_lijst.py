@@ -57,6 +57,9 @@ with open('lijst.txt','wb') as lijst:
 					continue
 
 				lijst.write("%s\t%s\t%s\n" % tuple(vormen))
+				dus.append(vormen)
 				stats += 1
 
 		print stats
+
+json.dump(dus, open('lijst.json','wb'))
